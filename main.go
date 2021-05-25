@@ -1,10 +1,14 @@
 package main
 
+//PARSING A JSON FILE
 import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"os"
+	"strconv"
+
+	"github.com/thedevsaddam/gojsonq"
 )
 
 type AllSpots struct {
@@ -12,30 +16,27 @@ type AllSpots struct {
 }
 type Spot struct {
 	Id     string `json:"id"`
-	Fields Fields `json:"Fields"`
+	Fields Fields `json:"fields"`
 }
 type Fields struct {
-	SurfBreak        string `json:"SurfBreak"`
-	DifficultyLevel  int    `json:"DifficultyLevel"`
+	SurfBreak        string `json:"Surf Break"`
+	DifficultyLevel  int    `json:"Difficulty Level"`
 	Destination      string `json:"Destination"`
 	Geocode          string `json:"Geocode"`
-	MagicSeaweedLink string `json:"MagicSeaweedLink"`
+	MagicSeaweedLink string `json:"Magic Seaweed Link"`
 }
 
 func main() {
 	jsonFile, err := os.Open("data.json")
+	jq := gojsonq.New().File("data.json")
+	res := jq.Find("records.fields.[1].SurfBreak.[1]")
+	fmt.Println(res)
 	if err != nil {
 		fmt.Println(err)
 	}
 	fmt.Println("Successfully Opened data.json")
-	defer jsonFile.Close()
 
 	byteValue, _ := ioutil.ReadAll(jsonFile)
-
-	var result map[string]interface{}
-	json.Unmarshal([]byte(byteValue), &result)
-
-	fmt.Println(result["records"])
 
 	var records AllSpots
 
@@ -43,6 +44,13 @@ func main() {
 
 	for i := 0; i < len(records.AllSpots); i++ {
 		fmt.Println("Spot ID: " + records.AllSpots[i].Id)
+		fmt.Println("Spot Destination: " + records.AllSpots[i].Fields.Destination)
+		fmt.Println("Spot Difficulty Level: " + strconv.Itoa(records.AllSpots[i].Fields.DifficultyLevel))
 		fmt.Println("Spot fields: " + records.AllSpots[i].Fields.SurfBreak)
+		fmt.Println("Spot Geocode: " + records.AllSpots[i].Fields.Geocode)
+		fmt.Println("Spot MagicSeaweedLink: " + records.AllSpots[i].Fields.MagicSeaweedLink)
+
 	}
+
+	defer jsonFile.Close()
 }

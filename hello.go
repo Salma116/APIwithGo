@@ -1,5 +1,6 @@
 package main
 
+// CREATE A SIMPLE Restful API
 import (
 	"encoding/json"
 	"fmt"

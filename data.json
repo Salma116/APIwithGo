@@ -3,9 +3,8 @@
         {
             "id": "rec5aF9TjMjBicXCK",
             "fields": {
-                "Surf Break": [
-                    "Reef Break"
-                ],
+                "Surf Break": 
+                    "Reef Break",
                 "Difficulty Level": 4,
                 "Destination": "Pipeline",
                 "Geocode": "🔵 eyJpIjoiUGlwZWxpbmUsIE9haHUsIEhhd2FpaSIsIm8iOnsic3RhdHVzIjoiT0siLCJmb3JtYXR0ZWRBZGRyZXNzIjoiRWh1a2FpIEJlYWNoIFBhcmssIEhhbGVpd2EsIEhJIDk2NzEyLCBVbml...",
@@ -50,9 +49,8 @@
         {
             "id": "recT98Z2El7YYwmc4",
             "fields": {
-                "Surf Break": [
-                    "Point Break"
-                ],
+                "Surf Break":
+                    "Point Break",
                 "Difficulty Level": 5,
                 "Destination": "Skeleton Bay",
                 "Geocode": "🔵 eyJpIjoiU2tlbGV0b24gQmF5LCBOYW1pYmlhIiwibyI6eyJzdGF0dXMiOiJPSyIsImZvcm1hdHRlZEFkZHJlc3MiOiJOYW1pYmlhIiwibGF0IjotMjUuOTE0NDkxOSwibG5nIjoxNC45MDY4NTk...",
@@ -97,9 +95,8 @@
         {
             "id": "recH2ennHFNOtB1Wt",
             "fields": {
-                "Surf Break": [
-                    "Point Break"
-                ],
+                "Surf Break":
+                    "Point Break",
                 "Difficulty Level": 4,
                 "Destination": "Superbank",
                 "Geocode": "🔵 eyJpIjoiU3VwZXJiYW5rLCBHb2xkIENvYXN0LCBBdXN0cmFsaWEiLCJvIjp7InN0YXR1cyI6Ik9LIiwiZm9ybWF0dGVkQWRkcmVzcyI6IlNuYXBwZXIgUm9ja3MgUmQsIENvb2xhbmdhdHRhIFF...",
